@@ -1,19 +1,12 @@
-
+require "bundler/setup"
+require 'yaml'
+require 'active_record'
 ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 require './app'
-
-
-
-
-require "bundler/setup"
-require 'yaml'
-require 'active_record'
-
-Bundler.require
 
 
 DB = ActiveRecord::Base.establish_connection({
